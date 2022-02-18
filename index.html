@@ -3,18 +3,46 @@
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body background="assets/burger-friends.jpg">
     <header>
-      <h1> What's for Dinner</h1>
+      <h1>
+        What's for Dinner
+      </h1>
       <button> </button>
     </header>
     <main>
-      <section></section>
-      <h2></h2>
-      <ul>
-      </ul>
-      <button></button>
-      <section></section>
+      <section class='meal-selector'>
+        <h2>
+          What are you looking for?*
+        </h2>
+      <section class='dish-button'>
+        <div>
+          <input type='radio' id='main' name='course' value='side'/>
+          <label for='main'> Side </label>
+        </div>
+        <div>
+          <input type='radio' id='main' name='course' value='main'/>
+          <label for='main'> Main Dish </label>
+        </div>
+        <div>
+          <input type='radio' id='main' name='course' value='dessert'/>
+          <label for='main'> Dessert </label>
+        </div>
+        <!-- <div>
+          <input type='radio' id='main' name='course' value='meal'/>
+          <label for='main'> Entire Meal </label>
+        </div> -->
+      </section>
+        <menu>
+          <li input type='radio'> Side</li>
+          <li><input type='radio'> Main Dish</li>
+          <li><input type='radio'> Dessert</li>
+          <button class='cookbtn'>LET'S COOK!</button>
+        </menu>
+      </section>
+      <section class'cookpot'>
+        <img id='pot' src='assets/cookpot.svg'>
+      </section>
     </main>
 
 
