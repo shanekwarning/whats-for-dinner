@@ -64,7 +64,7 @@ header{
   border-radius: 4px;
   padding: 10;
 }
-section{
+.main-box{
   background-color: rgba(225, 225, 225, .9);
   height: 450;
   width: 450;
@@ -165,3 +165,60 @@ img{
   background-color: #0fb9b1;
   border: none;
   font-size: 16;
+}
+  .meal{
+    display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+  	justify-content: center;
+	  align-items: stretch;
+	  align-content: stretch;
+  }
+
+  .you-should-make-container{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: stretch;
+    height: 33%
+  }
+
+  .you-should-make{
+    font-style: italic;
+  }
+
+  .meal-display-container{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    height: 33%
+  }
+
+  .meal-display{
+    font-style: bolder;
+    font-size: 40;
+  }
+
+  .clear-button-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 33%
+  }
+
+  .clear-button{
+    margin: 10;
+    background-color: #95a5a6;
+    border: none;
+    font-size: 16;
+    color: white;
+  }
+
+  .hidden{
+    display: none;
+  }
