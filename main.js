@@ -70,8 +70,14 @@ function submitNewRecipe() {
     hideElement(cookPot)
   } else if (recipeTypeInput.value === 'Main Dish') {
     mainsArray.push(recipeNameInput.value)
+    displayMeal.innerText = recipeNameInput.value;
+    showElement(displayBox);
+    hideElement(cookPot)
   } else if (recipeTypeInput.value === 'Dessert') {
     dessertsArray.push(recipeNameInput.value)
+    displayMeal.innerText = recipeNameInput.value;
+    showElement(displayBox);
+    hideElement(cookPot)
   } else{
     alert('Recipe Type entered does not match, Side, Main Dish, or Dessert')
   }
