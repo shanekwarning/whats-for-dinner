@@ -1,15 +1,16 @@
 var letsCookButton = document.querySelector('.cooking-button');
 var sideButton = document.querySelector('#sideS');
 var mainButton = document.querySelector('#mainS');
-var dessertButton = document.querySelector('#dessertS')
+var dessertButton = document.querySelector('#dessertS');
+// var radioButtons = document.querySelector('input[name="course"]:checked');
 // var radioButtons = document.querySelectorAll('input[name="course"]');
 
 
 
 letsCookButton.addEventListener('click', showMeal);
 sideButton.addEventListener('click', inputSide);
-mainButton.addEventListener('click', inputMain);
-dessertButton.addEventListener('click', inputDessert);
+// mainButton.addEventListener('click', inputMain);
+// dessertButton.addEventListener('click', inputDessert);
 
 function hideElement(element) {
   element.classList.add('hidden');
@@ -21,12 +22,31 @@ function showElement(element) {
 
 function showMeal() {
 var cookPot = document.querySelector('.cook-pot');
-cookPot.classList.add('hidden');
+var showMeal = document.querySelector('.meal');
+var radioButtons = document.querySelector('input[name="course"]:checked');
+if (radioButtons != null) {
+  hideElement(cookPot);
+  showElement(showMeal);
 }
+// cookPot.classList.add('hidden');
+// for (var i = 0; i < radioButtons.length: i++);
+// if (radioButtons[i].checked === true) {
+// if (document.getElementByName('course').checked)
+  // hideElement(cookPot);
+}
+// hideElement(cookPot);
+
 
 function inputSide() {
 
-}
+var radioButtonBox = document.querySelector('.meal');
+var randomDispalyedMeal = sidesArray[getRandomFood(sidesArray)];
+var displayMeal = document.querySelector('.meal-display');
+dispalyedMeal.innerText = randomDisplayedMeal;
+showElement(radioButonBox)
+};
+
+console.log(inputSide);
 
 // function randomMeal() {
 //   var side =
