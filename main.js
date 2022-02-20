@@ -2,6 +2,7 @@ var letsCookButton = document.querySelector('.cooking-button');
 var sideButton = document.querySelector('#sideS');
 var mainButton = document.querySelector('#mainS');
 var dessertButton = document.querySelector('#dessertS');
+var addRecipeButton = document.querySelector('.recipe');
 // var radioButtons = document.querySelector('input[name="course"]:checked');
 // var radioButtons = document.querySelectorAll('input[name="course"]');
 
@@ -11,6 +12,7 @@ letsCookButton.addEventListener('click', showMeal);
 sideButton.addEventListener('click', inputSide);
 mainButton.addEventListener('click', inputMain);
 dessertButton.addEventListener('click', inputDessert);
+addRecipeButton.addEventListener('click', addRecipe);
 
 function hideElement(element) {
   element.classList.add('hidden');
@@ -61,6 +63,12 @@ function inputDessert() {
   showElement(cookPot);
   displayMeal.innerText = randomDisplayedMeal;
   hideElement(displayBox);
+}
+
+function addRecipe() {
+  var footer = document.querySelector('.footer-form');
+  showElement(footer)
+  console.log(footer)
 }
 
 
