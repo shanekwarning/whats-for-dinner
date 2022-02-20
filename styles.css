@@ -7,4 +7,161 @@ grey - #95a5a6;
 red - #ee5253
 
 */
+header{
+  background-color: #0fb9b1;
+}
 
+.navigation-bar{
+  font-family: 'Roboto', sans-serif
+  background-color: #0fb9b1;
+  /* font-size: 20; */
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: stretch;
+  margin-right: 10;
+  margin-left: 10;
+}
+.dinner{
+  font-size: 22px;
+  font-weight: 900;
+}
+/* body{
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  overflow: hidden; */
+  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      font-family: 'Roboto', sans-serif;
+      height: 100%;
+      min-width: 600px;
+      overflow: hidden;
+      margin: 0;
+      background-size: cover;
+      background-position: center;
+  }
+
+.box-container{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: stretch;
+  margin: 150;
+  height: 90%;
+}
+.btn-recipe{
+}
+
+.recipe{
+  background-color: rgba(225, 225, 225, .9);
+  border-radius: 4px;
+  padding: 10;
+}
+section{
+  background-color: rgba(225, 225, 225, .9);
+  height: 450;
+  width: 450;
+  align-items: center
+}
+
+.meal-selector{
+  display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      align-content: stretch;
+}
+
+.button-layout{
+  display: flex;
+  /* justify-content: flex-start; */
+  padding-left: 50;
+
+}
+/* #cook-button-box{
+  color: #0fb9b1 */
+/* }
+.cooking-button{
+  padding: 20;
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 16;
+} */
+
+.box-title{
+  font-size: 25;
+  font-weight: bold;
+
+}
+
+span {
+  color: #ee5253;
+}
+
+menu{
+
+
+}
+
+.cookbtn{
+  background-color: #0fb9b1;
+  border-radius: 6px;
+  border: #0fb9b1;
+  width: 200px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+img{
+
+  height: 100px;
+  width: 100px;
+}
+
+.footer-form{
+  background-color: rgba(225, 225, 225, .9);
+  display: flex;
+  	flex-direction: row;
+	flex-wrap: nowrap;
+  	justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  padding: 10;
+
+
+}
+.add-recipe{
+  background-color:rgba(225, 225, 225, .9);
+  display: flex;
+}
+
+.user-recipe{
+  margin-right: 10;
+}
+
+.add-new{
+  margin-left: 10;
+  padding-right: 30;
+  padding-left: 30;
+  padding-top: 10;
+  padding-bottom: 10;
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 16;
+}
+
+.cooking-button{
+  padding-right: 30;
+  padding-left: 30;
+  padding-top: 10;
+  padding-bottom: 10;
+  background-color: #0fb9b1;
+  border: none;
+  font-size: 16;
