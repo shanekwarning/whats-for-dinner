@@ -28,25 +28,20 @@ if (radioButtons != null) {
   hideElement(cookPot);
   showElement(showMeal);
 }
-// cookPot.classList.add('hidden');
-// for (var i = 0; i < radioButtons.length: i++);
-// if (radioButtons[i].checked === true) {
-// if (document.getElementByName('course').checked)
-  // hideElement(cookPot);
 }
 // hideElement(cookPot);
 
 
 function inputSide() {
-
-var radioButtonBox = document.querySelector('.meal');
-var randomDispalyedMeal = sidesArray[getRandomFood(sidesArray)];
+var cookPot = document.querySelector('.cook-pot');
+var displayBox = document.querySelector('.meal');
+var randomDisplayedMeal = sidesArray[getRandomFood(sidesArray)];
 var displayMeal = document.querySelector('.meal-display');
-dispalyedMeal.innerText = randomDisplayedMeal;
-showElement(radioButonBox)
-};
+showElement(cookPot);
+displayMeal.innerText = randomDisplayedMeal;
+hideElement(displayBox);
 
-console.log(inputSide);
+};
 
 // function randomMeal() {
 //   var side =
