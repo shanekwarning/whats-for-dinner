@@ -2,17 +2,20 @@ var letsCookButton = document.querySelector('.cooking-button');
 var sideButton = document.querySelector('#sideS');
 var mainButton = document.querySelector('#mainS');
 var dessertButton = document.querySelector('#dessertS');
-var addRecipeButton = document.querySelector('.recipe');
-// var radioButtons = document.querySelector('input[name="course"]:checked');
-// var radioButtons = document.querySelectorAll('input[name="course"]');
-
-
+var showAddRecipeButton = document.querySelector('.recipe');
+var recipeTypeInput = document.querySelector('#recipe-type-input');
+var recipeNameInput = document.querySelector('#recipe-name-input');
+var addNewButton = document.querySelector('.add-new');
+var displayMeal = document.querySelector('.meal-display');
+var cookPot = document.querySelector('.cook-pot');
+var displayBox = document.querySelector('.meal');
 
 letsCookButton.addEventListener('click', showMeal);
 sideButton.addEventListener('click', inputSide);
 mainButton.addEventListener('click', inputMain);
 dessertButton.addEventListener('click', inputDessert);
-addRecipeButton.addEventListener('click', addRecipe);
+showAddRecipeButton.addEventListener('click', addRecipe);
+addNewButton.addEventListener('click', submitNewRecipe);
 
 function hideElement(element) {
   element.classList.add('hidden');
@@ -31,14 +34,9 @@ if (radioButtons != null) {
   showElement(showMeal);
 }
 }
-// hideElement(cookPot);
-
 
 function inputSide() {
-var cookPot = document.querySelector('.cook-pot');
-var displayBox = document.querySelector('.meal');
 var randomDisplayedMeal = sidesArray[getRandomFood(sidesArray)];
-var displayMeal = document.querySelector('.meal-display');
 showElement(cookPot);
 displayMeal.innerText = randomDisplayedMeal;
 hideElement(displayBox);
@@ -46,20 +44,14 @@ hideElement(displayBox);
 };
 
 function inputMain() {
-var cookPot = document.querySelector('.cook-pot');
-var displayBox = document.querySelector('.meal');
 var randomDisplayedMeal = mainsArray[getRandomFood(mainsArray)]
-var displayMeal = document.querySelector('.meal-display');
 showElement(cookPot);
 displayMeal.innerText = randomDisplayedMeal;
 hideElement(displayBox);
 }
 
 function inputDessert() {
-  var cookPot = document.querySelector('.cook-pot');
-  var displayBox = document.querySelector('.meal');
   var randomDisplayedMeal = dessertsArray[getRandomFood(dessertsArray)]
-  var displayMeal = document.querySelector('.meal-display');
   showElement(cookPot);
   displayMeal.innerText = randomDisplayedMeal;
   hideElement(displayBox);
@@ -68,9 +60,22 @@ function inputDessert() {
 function addRecipe() {
   var footer = document.querySelector('.footer-form');
   showElement(footer)
-  console.log(footer)
 }
 
+function submitNewRecipe() {
+  if (recipeTypeInput.value === 'Side') {
+    sidesArray.push(recipeNameInput.value)
+    displayMeal.innerText = recipeNameInput.value;
+    showElement(displayBox);
+    hideElement(cookPot)
+  } else if (recipeTypeInput.value === 'Main Dish') {
+    mainsArray.push(recipeNameInput.value)
+  } else if (recipeTypeInput.value === 'Dessert') {
+    dessertsArray.push(recipeNameInput.value)
+  } else{
+    alert('Recipe Type entered does not match, Side, Main Dish, or Dessert')
+  }
+}
 
 function getRandomFood(foodCourse) {
   return Math.floor(Math.random() * foodCourse.length);
